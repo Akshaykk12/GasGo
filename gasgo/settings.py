@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'customers',
     'services',
     'support',
+    # 'userauths',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +123,19 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = '/customers/profile/'  # Where to redirect users after login
+LOGOUT_REDIRECT_URL = '/'  # Where to redirect users after logout
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+JAZZMIN_SETTINGS = {
+    'site_header': "Admin Dashboard",
+    'site_brand' : "Admin Dashboard",
+    'copyright' : "GasGo"
+}
