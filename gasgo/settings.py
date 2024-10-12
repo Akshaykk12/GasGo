@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    'customers',
-    'services',
-    'support',
     # 'userauths',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +130,7 @@ LOGIN_URL = '/login/'
 # LOGIN_REDIRECT_URL = '/home/'
 # LOGOUT_REDIRECT_URL = '/login/'
 
-LOGIN_REDIRECT_URL = '/customers/profile/'  # Where to redirect users after login
+# LOGIN_REDIRECT_URL = '/customers/profile/'  # Where to redirect users after login
 LOGOUT_REDIRECT_URL = '/login/'  # Where to redirect users after logout
 
 # Default primary key field type

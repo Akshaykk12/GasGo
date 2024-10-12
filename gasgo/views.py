@@ -3,6 +3,8 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from .forms import CustomUserCreationForm
+
  
 # Views
 @login_required
@@ -18,7 +20,7 @@ def register(request):
             password = form.cleaned_data.get('password1')
             user = authenticate(username = username, password = password)
             login(request, user)
-            return render(request, "registration/success.html", {})
+            return redirect('home')
     else:
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
@@ -32,3 +34,4 @@ def userDetails(request, username):
 @login_required
 def account_overview(request):
     return render(request, 'accounts/account_overview.html')
+
