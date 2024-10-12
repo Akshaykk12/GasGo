@@ -23,11 +23,12 @@ from gasgo import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+
+    # path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', views.register, name='register'),
 
+    path('', include('store.urls') ),
     path('u/<str:username>', views.userDetails ),
 
     # path('accounts/', include('django.contrib.auth.urls')),
