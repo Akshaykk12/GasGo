@@ -13,8 +13,12 @@ class AdminCategory(admin.ModelAdmin):
 
 class CustomerData(admin.ModelAdmin):
     list_display = ['first_name', 'last_name', 'phone', 'email', 'password']
+
+class CustomerOrders(admin.ModelAdmin):
+    list_display = ['product','customer', 'quantity', 'address', 'phone', 'status']
+
     
 admin.site.register(Product, AdminProduct)
 admin.site.register(Category, AdminCategory)
 admin.site.register(Customer, CustomerData)
-admin.site.register(Order )
+admin.site.register(Order, CustomerOrders )

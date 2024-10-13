@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    # 'userauths',
     'store',
 ]
 
@@ -126,12 +125,6 @@ STATICFILES_DIRS = [BASE_DIR, "static"]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-LOGIN_URL = '/login/'
-# LOGIN_REDIRECT_URL = '/home/'
-# LOGOUT_REDIRECT_URL = '/login/'
-
-# LOGIN_REDIRECT_URL = '/customers/profile/'  # Where to redirect users after login
-LOGOUT_REDIRECT_URL = '/login/'  # Where to redirect users after logout
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
