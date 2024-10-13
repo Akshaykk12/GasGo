@@ -5,10 +5,16 @@ Django application to provide consumer services for gas utilities. The applicati
 The application would also provide customer support representatives with a tool to manage requests and provide support to customers.
 
 ## Screenshots
+### Customer View
 ![Default Home View](homepage.png?raw=true "Title")
 ![Default Home View](orders_and_tracking.png?raw=true "Title")
 
-### Main features
+### Admin View
+![Default Home View](admin_dashboard.png?raw=true "Title")
+![Default Home View](orders_table.png?raw=true "Title")
+![Default Home View](products_table.png?raw=true "Title")
+
+## Main features
 
 * Service requests: The application would allow customers to submit service requests online. They have the ability to select the type of service request.
 
